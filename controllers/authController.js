@@ -62,11 +62,11 @@ exports.logout = (req, res) => {
 // Google OAuth Controller using Passport.js
 passport.use(
   new GoogleStrategy(
-    // {
-    //   clientID: '743701796177-omdirq2r4vtlpmm83m69q4i2msvp1n5p.apps.googleusercontent.com', // Replace with your Google client ID
-    //   clientSecret: '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', // Replace with your Google client secret
-    //   callbackURL: '/auth/google/callback',
-    // },
+    {
+      clientID: '743701796177-omdirq2r4vtlpmm83m69q4i2msvp1n5p.apps.googleusercontent.com', // Replace with your Google client ID
+      clientSecret: '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', // Replace with your Google client secret
+      callbackURL: '/auth/google/callback',
+    },
     function (accessToken, refreshToken, profile, done) {
       const { name, email } = profile._json;
 
